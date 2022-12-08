@@ -14,6 +14,17 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -28,11 +39,11 @@ img {
   max-width: 100%;
   height: auto;
 }
-main,
-footer {
-  max-width: 480px;
-  margin: 0 auto;
-}
+// main,
+// footer {
+//   width: 375px;
+//   margin: 0 auto;
+// }
 
 .visually-hidden {
   position: absolute;
@@ -47,9 +58,6 @@ footer {
   overflow: hidden;
 }
 
-.header-section {
-}
-
 .header__container {
   display: flex;
   // gap: 20px;
@@ -58,8 +66,7 @@ footer {
   position: relative;
   padding: 8px 16px;
   margin: 0 auto;
-  max-width: 480px;
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
 }
 
 .tel-menu {
@@ -78,7 +85,7 @@ footer {
 }
 
 .menu {
-  display: none;
+  // display: none;
   position: absolute;
   left: 0;
   top: 101%;
@@ -91,8 +98,15 @@ footer {
   color: #ffffff;
   background-color: rgba(15, 15, 15, 0.7);
 
+  opacity: 0;
+  transform-origin: top right;
+  scale: 0;
+  transition: opacity 250ms ease, scale 250ms ease;
+
   &.is-open {
-    display: block;
+    // display: block;
+    opacity: 1;
+    scale: 1;
   }
 }
 
@@ -109,4 +123,65 @@ footer {
   border: none;
   padding: 0;
   margin: 0;
+}
+.hero {
+  padding-top: 184px;
+  padding-bottom: 184px;
+  background-color: #444444;
+}
+
+.hero__container {
+  padding-right: 25px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+.section {
+  padding-top: 60px;
+}
+
+.container {
+  margin: 0 auto;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 480px;
+  }
+}
+
+.hero__title {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 1.2px;
+  color: #f5f5f5;
+}
+
+.hero__sub-title,
+.hero__text {
+  @media screen and (max-width: 1023px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.hero__btn {
+  padding: 20px 21px;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  background: linear-gradient(180deg, #ffa96b -21.43%, #ee7a28 100%);
+  border-radius: 10px;
 }
