@@ -62,30 +62,68 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2>Наши работы</h2>
-          <ul>
-            <li>
+          <h2 class="title">Наши работы</h2>
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="./images/studio-min.jpg" width="489" />
+              <!-- <div class="text">Caption Text</div> -->
+            </div>
+
+            <div class="mySlides fade">
+              <img src="./images/camera-min.jpg" width="489" />
+              <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="mySlides fade">
+              <img src="./images/lighter-min.jpg" width="489" />
+              <!-- <div class="text">Caption Three</div> -->
+            </div>
+
+            <!-- Next and previous buttons -->
+            <button class="prev" onclick="plusSlides(-1)">
+              <svg class="left" width="12" height="23">
+                <use href="./images/sprite.svg#icon-arrow_left"></use>
+              </svg>
+            </button>
+            <button class="next" onclick="plusSlides(1)">
+              <svg class="right" width="12" height="23">
+                <use href="./images/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <br />
+
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <!-- <ul class="gallery">
+            <li class="gallery__items gallery__items--left">
               <img
                 src="./images/studio-min.jpg"
                 alt="Фото студия"
                 width="489"
               />
             </li>
-            <li>
+            <li class="gallery__primary">
               <img
                 src="./images/camera-min.jpg"
                 alt="Фото камера"
                 width="556"
               />
             </li>
-            <li>
+            <li class="gallery__items gallery__items--right">
               <img
                 src="./images/lighter-min.jpg"
                 alt="Человек и сафиты"
                 width="489"
               />
             </li>
-          </ul>
+          </ul> -->
         </div>
       </section>
       <section>
@@ -345,5 +383,6 @@
       </ul>
     </footer>
     <script src="./js/menu.js"></script>
+    <script src="./js/gallery-one.js"></script>
   </body>
 </html>

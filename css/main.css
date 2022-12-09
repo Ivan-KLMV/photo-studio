@@ -1,8 +1,151 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  border: none;
+}
+
+.prev {
+  left: 16px;
+}
+.prev .left {
+  margin-right: 3px;
+  stroke: #e97522;
+}
+
+.next {
+  right: 16px;
+}
+.next .right {
+  margin-left: 3px;
+  stroke: #e97522;
+}
+
+.prev:hover .left,
+.next:hover .left {
+  stroke: white;
+}
+
+.prev:hover .right,
+.next:hover .right {
+  stroke: white;
+}
+
+/* Position the "next button" to the right */
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #e97522;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+  scale: 0.6;
+}
+
+.active,
+.dot:hover {
+  background-color: #e97522;
+  scale: 1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   color: #333333;
   font-family: Montserrat, sans-serif;
+}
+body.menu-open {
+  overflow: hidden;
 }
 
 a {
@@ -55,6 +198,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -88,9 +232,9 @@ img {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 101%;
+  top: 48px;
   width: 100%;
   height: 100vh;
   padding: 16px;
@@ -197,4 +341,13 @@ img {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-21.43%, #ffa96b), to(#ee7a28));
   background: linear-gradient(180deg, #ffa96b -21.43%, #ee7a28 100%);
   border-radius: 10px;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #333333;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
