@@ -43,7 +43,7 @@
     </header>
     <main>
       <section class="hero">
-        <div class="hero__container container">
+        <div class="hero__container">
           <h1 class="hero__title">Профессиональная фотосессия в студии</h1>
           <h2 class="hero__sub-title">
             Наша фотостудия позволит исполнить ваши мечты
@@ -57,30 +57,24 @@
             фотостудией вы останетесь довольны и еще не раз захотите
             возвращаться к нам.
           </p>
-          <button type="button" class="hero__btn">Получить консультацию</button>
+          <button type="button" class="main-btn">Получить консультацию</button>
         </div>
       </section>
       <section class="section">
-        <div class="container">
+        <div class="container gallery">
           <h2 class="title">Наши работы</h2>
           <!-- Slideshow container -->
           <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
               <img src="./images/studio-min.jpg" width="489" />
-              <!-- <div class="text">Caption Text</div> -->
             </div>
-
             <div class="mySlides fade">
               <img src="./images/camera-min.jpg" width="489" />
-              <!-- <div class="text">Caption Two</div> -->
             </div>
-
             <div class="mySlides fade">
               <img src="./images/lighter-min.jpg" width="489" />
-              <!-- <div class="text">Caption Three</div> -->
             </div>
-
             <!-- Next and previous buttons -->
             <button class="prev" onclick="plusSlides(-1)">
               <svg class="left" width="12" height="23">
@@ -94,7 +88,6 @@
             </button>
           </div>
           <br />
-
           <!-- The dots/circles -->
           <div style="text-align: center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -126,86 +119,141 @@
           </ul> -->
         </div>
       </section>
-      <section>
-        <h2>Наши локации</h2>
-        <ul>
-          <li>
-            <img src="./images/corner-building-min.jpg" alt="Угловое здание" />
-          </li>
-          <li>
-            <img
-              src="./images/rounded-building-min.jpg"
-              alt="Полукруглое здание"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/european-building-min.jpg"
-              alt="Европейское здание"
-            />
-          </li>
-        </ul>
-        <button type="button">выбрать локацию</button>
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Наши локации</h2>
+          <!-- Images used to open the lightbox -->
+          <div class="row">
+            <div class="column">
+              <img
+                src="./images/corner-building-min.jpg"
+                onclick="openModal();currentSlideTwo(1)"
+                class="hover-shadow"
+                width="340"
+              />
+            </div>
+          </div>
+          <!-- The Modal/Lightbox -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <div class="mySlidesTwo">
+                <img
+                  src="./images/corner-building-min.jpg"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="mySlidesTwo">
+                <img
+                  src="./images/rounded-building-min.jpg"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="mySlidesTwo">
+                <img
+                  src="./images/european-building-min.jpg"
+                  style="width: 100%"
+                />
+              </div>
+              <!-- Next/previous controls -->
+              <button class="prev" onclick="plusSlidesTwo(-1)">
+                <svg class="left" width="12" height="23">
+                  <use href="./images/sprite.svg#icon-arrow_left"></use>
+                </svg>
+              </button>
+              <button class="next" onclick="plusSlidesTwo(1)">
+                <svg class="right" width="12" height="23">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+              <!-- Caption text -->
+            </div>
+          </div>
+          <!-- <ul>
+            <li>
+              <img src="./images/corner-building-min.jpg" alt="Угловое здание" />
+            </li>
+            <li>
+              <img
+                src="./images/rounded-building-min.jpg"
+                alt="Полукруглое здание"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/european-building-min.jpg"
+                alt="Европейское здание"
+              />
+            </li>
+          </ul> -->
+          <button type="button" class="main-btn">выбрать локацию</button>
+        </div>
       </section>
-      <section>
-        <h2>Оформление фотостудии</h2>
-        <img src="./images/preview-cover-min.jpg" alt="" />
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Оформление фотостудии</h2>
+          <img src="./images/preview-cover-min.jpg" alt="" />
+        </div>
       </section>
-      <section>
-        <h2>Виды услуг</h2>
-        <ul>
-          <li><img src="./images/love-story-min.png" alt="" /></li>
-          <li><img src="./images/teenage-min.png" alt="" /></li>
-          <li><img src="./images/pair-min.png" alt="" /></li>
-          <li><img src="./images/guy-min.png" alt="" /></li>
-          <li><img src="./images/family-photo-min.png" alt="" /></li>
-          <li><img src="./images/group-photo-min.png" alt="" /></li>
-          <li><img src="./images/look-book-min.png" alt="" /></li>
-          <li><img src="./images/girls-min.png" alt="" /></li>
-          <li><img src="./images/pregnant-min.png" alt="" /></li>
-          <li><img src="./images/photo-with-animals-min.png" alt="" /></li>
-          <li><img src="./images/business-style-min.png" alt="" /></li>
-        </ul>
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Виды услуг</h2>
+          <ul>
+            <li><img src="./images/love-story-min.png" alt="" /></li>
+            <li><img src="./images/teenage-min.png" alt="" /></li>
+            <li><img src="./images/pair-min.png" alt="" /></li>
+            <li><img src="./images/guy-min.png" alt="" /></li>
+            <li><img src="./images/family-photo-min.png" alt="" /></li>
+            <li><img src="./images/group-photo-min.png" alt="" /></li>
+            <li><img src="./images/look-book-min.png" alt="" /></li>
+            <li><img src="./images/girls-min.png" alt="" /></li>
+            <li><img src="./images/pregnant-min.png" alt="" /></li>
+            <li><img src="./images/photo-with-animals-min.png" alt="" /></li>
+            <li><img src="./images/business-style-min.png" alt="" /></li>
+          </ul>
+        </div>
       </section>
-      <section>
-        <h2>Этапы работ</h2>
-        <ol>
-          <li>
-            <h3>Заявка</h3>
-            <p>
-              Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
-              этих мягких.
-            </p>
-          </li>
-          <li>
-            <h3>Бронь</h3>
-            <p>
-              Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
-              этих мягких.
-            </p>
-          </li>
-          <li>
-            <h3>Составление Технического задания</h3>
-            <p>
-              Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
-              этих мягких.
-            </p>
-          </li>
-          <li>
-            <h3>Съёмка</h3>
-            <p>
-              Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
-              этих мягких.
-            </p>
-          </li>
-          <li>
-            <h3>Готовые фото</h3>
-            <p>
-              Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
-              этих мягких.
-            </p>
-          </li>
-        </ol>
+      <section class="section">
+        <div class="container">
+          <h2 class="title">Этапы работ</h2>
+          <ol>
+            <li>
+              <h3>Заявка</h3>
+              <p>
+                Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
+                этих мягких.
+              </p>
+            </li>
+            <li>
+              <h3>Бронь</h3>
+              <p>
+                Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
+                этих мягких.
+              </p>
+            </li>
+            <li>
+              <h3>Составление Технического задания</h3>
+              <p>
+                Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
+                этих мягких.
+              </p>
+            </li>
+            <li>
+              <h3>Съёмка</h3>
+              <p>
+                Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
+                этих мягких.
+              </p>
+            </li>
+            <li>
+              <h3>Готовые фото</h3>
+              <p>
+                Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще
+                этих мягких.
+              </p>
+            </li>
+          </ol>
+        </div>
       </section>
       <section>
         <h2>Фотостудия для любых идей</h2>
@@ -384,5 +432,6 @@
     </footer>
     <script src="./js/menu.js"></script>
     <script src="./js/gallery-one.js"></script>
+    <!-- <script src="./js/gallery-two.js"></script> -->
   </body>
 </html>

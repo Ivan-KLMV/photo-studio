@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css");
 @import "./utils/gallery-one";
+@import "./utils/gallery-two";
 
 $text-color: #333333;
 $secondary-text-color: #4a4a4a;
@@ -150,6 +151,7 @@ img {
 }
 
 .container {
+  padding: 0 25px;
   margin: 0 auto;
   @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 480px;
@@ -182,7 +184,9 @@ img {
   }
 }
 
-.hero__btn {
+.main-btn {
+  width: 100%;
+  margin-top: 25px;
   padding: 20px 21px;
   font-size: 14px;
   line-height: 1.21;
