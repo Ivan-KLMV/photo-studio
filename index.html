@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Photo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -64,129 +68,68 @@
         <div class="container gallery">
           <h2 class="title">Наши работы</h2>
           <!-- Slideshow container -->
-          <div class="slideshow-container">
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-              <img src="./images/studio-min.jpg" width="489" />
+          <div class="swiper">
+            <div class="swiper-wrapper gallery">
+              <!-- Full-width images with number and caption text -->
+              <div class="swiper-slide">
+                <a
+                  href="https://pixabay.com/get/g984c5f450e52a89af3f14ad6d946e6b0a99abce1f1f4e458a49ca984c9dff4de79d911e45568374882af09a40c2dc63e0a69ba643eae52b07d534b1c196a85de_1280.jpg"
+                >
+                  <img
+                    src="https://pixabay.com/get/g0e922551f115bc8edd76639f1f8eacf7ea15d70473d38f2b8d06053e78f3f4da1f5e7fc2f0735b582215a4d21d29ae4bd7d61ec881bd548f475cac92f924c766_640.jpg"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://pixabay.com/get/g8b3f1bef069a244b26f48af8f1e23e4f87e2238f6a91e25361a094a2d99e385d69ec656f159cd2590f4e4f60ac66bc7830a1e4438c2d1f8eee0f0d783305742c_640.jpg"
+                  alt="https://pixabay.com/get/g2cb073c78aad345ecaa774c600d532931bbb270bef8acb76dd85a4c37bb20a23007531ad54b909e52bdb1c66cc331a44024959e5c0617e868153672f87c88f76_1280.jpg"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://pixabay.com/get/g3de438669c128406372c45f3ed0a46e9534df76bbe769aabfb4827e07bf7244f56c6a777451d0603ad1801862759e2c2_640.jpgg"
+                  alt="https://pixabay.com/get/g1c128341840bdf01d2c13129301ee818da2b923c25f87dc6aac39a1d68ff8c9e218f695b3d43a291ed8134aeb38e8612b7ce971a3d16e19a70cae8caf0d18182_1280.jpg"
+                />
+              </div>
+              <!-- Next and previous buttons -->
             </div>
-            <div class="mySlides fade">
-              <img src="./images/camera-min.jpg" width="489" />
-            </div>
-            <div class="mySlides fade">
-              <img src="./images/lighter-min.jpg" width="489" />
-            </div>
-            <!-- Next and previous buttons -->
-            <button class="prev" onclick="plusSlides(-1)">
-              <svg class="left" width="12" height="23">
-                <use href="./images/sprite.svg#icon-arrow_left"></use>
-              </svg>
-            </button>
-            <button class="next" onclick="plusSlides(1)">
-              <svg class="right" width="12" height="23">
-                <use href="./images/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </button>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <br />
-          <!-- The dots/circles -->
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-          <!-- <ul class="gallery">
-            <li class="gallery__items gallery__items--left">
-              <img
-                src="./images/studio-min.jpg"
-                alt="Фото студия"
-                width="489"
-              />
-            </li>
-            <li class="gallery__primary">
-              <img
-                src="./images/camera-min.jpg"
-                alt="Фото камера"
-                width="556"
-              />
-            </li>
-            <li class="gallery__items gallery__items--right">
-              <img
-                src="./images/lighter-min.jpg"
-                alt="Человек и сафиты"
-                width="489"
-              />
-            </li>
-          </ul> -->
         </div>
       </section>
       <section class="section">
         <div class="container">
           <h2 class="title">Наши локации</h2>
           <!-- Images used to open the lightbox -->
-          <div class="row">
-            <div class="column">
-              <img
-                src="./images/corner-building-min.jpg"
-                onclick="openModal();currentSlideTwo(1)"
-                class="hover-shadow"
-                width="340"
-              />
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  src="https://pixabay.com/get/ge22d7e9070bd60c6bf09105d96a89de3382cad40054c0764190c64e991bcd809fbe04a507d5d6164354744fe1d13c39c9aa27301ec078d86ee42143137c2b115_640.jpg"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://pixabay.com/get/gcf6e8f16c9c40992e9378316266ffa8d5b3bccd660b7ff77c26e105ef4900a1243c74f7674cebd098b333df2ce064bcd341317acd068a3bfe9afb6cf233a675b_640.jpg"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://pixabay.com/get/g2c0f2f2603dffa55fe014d8f3fd8de168c27fb91c0638f028a84763cccc770431906b6da2c8982c11e79a2aea35a8938661ddde26ee269f4f8f3a7c60afff8ec_640.jpg"
+                />
+              </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <!-- The Modal/Lightbox -->
-          <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-              <div class="mySlidesTwo">
-                <img
-                  src="./images/corner-building-min.jpg"
-                  style="width: 100%"
-                />
-              </div>
-              <div class="mySlidesTwo">
-                <img
-                  src="./images/rounded-building-min.jpg"
-                  style="width: 100%"
-                />
-              </div>
-              <div class="mySlidesTwo">
-                <img
-                  src="./images/european-building-min.jpg"
-                  style="width: 100%"
-                />
-              </div>
-              <!-- Next/previous controls -->
-              <button class="prev" onclick="plusSlidesTwo(-1)">
-                <svg class="left" width="12" height="23">
-                  <use href="./images/sprite.svg#icon-arrow_left"></use>
-                </svg>
-              </button>
-              <button class="next" onclick="plusSlidesTwo(1)">
-                <svg class="right" width="12" height="23">
-                  <use href="./images/sprite.svg#icon-arrow-right"></use>
-                </svg>
-              </button>
-              <!-- Caption text -->
-            </div>
-          </div>
-          <!-- <ul>
-            <li>
-              <img src="./images/corner-building-min.jpg" alt="Угловое здание" />
-            </li>
-            <li>
-              <img
-                src="./images/rounded-building-min.jpg"
-                alt="Полукруглое здание"
-              />
-            </li>
-            <li>
-              <img
-                src="./images/european-building-min.jpg"
-                alt="Европейское здание"
-              />
-            </li>
-          </ul> -->
-          <button type="button" class="main-btn">выбрать локацию</button>
         </div>
       </section>
       <section class="section">
@@ -198,7 +141,7 @@
       <section class="section">
         <div class="container">
           <h2 class="title">Виды услуг</h2>
-          <ul>
+          <ul class="type-of-work">
             <li><img src="./images/love-story-min.png" alt="" /></li>
             <li><img src="./images/teenage-min.png" alt="" /></li>
             <li><img src="./images/pair-min.png" alt="" /></li>
@@ -430,8 +373,8 @@
         <li>telegram</li>
       </ul>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
     <script src="./js/menu.js" type="module"></script>
-    <script src="./js/gallery-one.js" type="module"></script>
-    <!-- <script src="./js/gallery-two.js"></script> -->
   </body>
 </html>
