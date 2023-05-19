@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+css/simple-lightbox.css
+css/simple-lightbox.css.map
+css/simple-lightbox.min.css
+css/simple-lightbox.min.css.map
